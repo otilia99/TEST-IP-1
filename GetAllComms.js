@@ -18,22 +18,21 @@ function getComm() {
         xhttp = new ActiveXObject('Microsoft.XMLHTTP')
     };
 
-    xhttp.onreadystatechange = function () {
+    xhttp.onreadystatechange = function() {
 
         if (this.readyState == 4 && this.status == 200) {
             console.log(xhttp.response);
 
             var obj = JSON.parse(this.responseText);
             alert_message = "";
-
+            removeChilds();
             for (var i = 0; i < obj.COMMENTS.length; i++) {
                 var temp = obj.COMMENTS[i];
-                alert_message = alert_message + temp[0] + " Postat de: " + temp[1] + "<br/>";
-
+                alert_message = alert_message + temp[0] + " Postat de: " + temp[1];
+                modify(temp[0], temp[1]);
                 console.log(temp);
 
             }
-            document.getElementById("divLocation").innerHTML = alert_message;
 
             console.log(alert_message);
         }
@@ -43,4 +42,26 @@ function getComm() {
     xhttp.open("GET", requestData, true);
     xhttp.send(null);
 
+}
+
+function modify(comentariu, owner) {
+    var elem = document.createElement("div")
+    var heading = document.createElement("h4");
+    var comment = document.createElement("p");
+    var comm_text = document.createTextNode(comentariu);
+    var node = document.createTextNode('@' + owner);
+    heading.appendChild(node);
+    comment.appendChild(comm_text);
+    elem.appendChild(heading);
+    elem.appendChild(comment);
+    var original = document.getElementById("content-area");
+    original.append(elem);
+}
+
+
+function removeChilds() {
+    const myNode = document.getElementById("content-area");
+    while (myNode.lastElementChild) {
+        myNode.removeChild(myNode.lastElementChild);
+    }
 }

@@ -16,7 +16,7 @@ function getBestPost() {
         if (xhttp.readyState == 4 && xhttp.status == 200) {
             console.log(xhttp.response);
             var obj = JSON.parse(xhttp.responseText);
-            //postID = obj.PAGE_IDS[0];
+            postID = obj.PAGE_IDS[0];
             console.log(postID);
             sessionStorage.setItem('postID', obj.PAGE_IDS[0]);
             //console.log(postID);
@@ -39,17 +39,33 @@ function getBestPost() {
     xhttp2.onreadystatechange = function() {
         if (xhttp2.readyState == 4 && xhttp2.status == 200) {
             console.log(xhttp2.response);
+            removeChilds();
             var obj2 = JSON.parse(xhttp2.responseText);
-            alert_message = "Postul cel mai bun: " + obj2.MESSAGE;
-            //console.log(alert_message);
+            alert_message = obj2.MESSAGE;
+            modifyHTMLBestPost(alert_message);
+            console.log('Get best post ' + alert_message);
             //alert(alert_message);
 
-            document.getElementById("divLocation").innerHTML = alert_message;
-
+        } else {
+            console.log('eroare de aia mare');
         }
 
 
     };
     xhttp2.open('GET', url2, true);
     xhttp2.send(null);
+}
+
+function modifyHTMLBestPost(comentariu) {
+    var elem = document.createElement("div")
+    var heading = document.createElement("h4");
+    var comment = document.createElement("p");
+    var comm_text = document.createTextNode(comentariu);
+    var node = document.createTextNode('Best post: ');
+    heading.appendChild(node);
+    comment.appendChild(comm_text);
+    elem.appendChild(heading);
+    elem.appendChild(comment);
+    var original = document.getElementById("content-area");
+    original.append(elem);
 }
