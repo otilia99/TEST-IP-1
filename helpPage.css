@@ -48,43 +48,34 @@ nav {
     justify-content: center;
 }
 
-.content{
-    background-color:  rgba(7, 31, 248, 0.11);
-    width:80vw;
+.content {
+    background-color: rgba(7, 31, 248, 0.11);
+    width: 80vw;
     height: 80vh;
     display: flex;
     flex-direction: column;
 }
 
-.search-area{
+.search-area {
     height: 10%;
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    align-items: center; 
+    align-items: center;
 }
-.search-area span{
+
+.search-area span {
     font-size: larger;
 }
-.search-box input{
-    height: 5vh;
-    width: 40vw;
-    border-radius: 10px;
-    background-color:  rgba(153, 153, 155, 0.329);
-    border: none;
-    background-image: url('search.png');
-    background-position: 10px 10px; 
-    background-repeat: no-repeat;
-    background-size: 15px;
-}
-.returnToSMA a{
+
+.returnToSMA a {
     color: black;
     font-size: larger;
     text-decoration: none;
 }
 
-.buttons-area{
+.buttons-area {
     height: 10%;
     width: 100%;
     display: flex;
@@ -92,23 +83,87 @@ nav {
     align-items: center;
     border-bottom: 1px solid black;
 }
-.buttons-area a{
+
+.buttons-area a {
     color: black;
     text-decoration: none;
 }
 
-.questions-area{
+.questions-area {
     height: 80%;
     width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
-.questions li{
-    margin-top:20px;
+
+.questions li {
+    margin-top: 20px;
 }
-.questions h1{
-    margin-bottom: 20%;
+
+.questions h1 {
+    margin-bottom: 30px;
+}
+
+
+/* Avatar + Drop menu bar*/
+
+.avatar {
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.avatar-dropmenu {
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    right: 5%;
+    display: inline-block;
+}
+
+.drop-button {
+    background-image: url('resized.png');
+    vertical-align: middle;
+    width: 50px;
+    height: 45px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+
+.drop-content {
+    display: none;
+    position: absolute;
+    background-color: #462BB1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.4);
+    z-index: 1;
+    right: -55px;
+}
+
+.drop-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.drop-content a:hover {
+    background-color: #f1f1f1
+}
+
+.avatar-dropmenu:hover .drop-content {
+    display: block;
+}
+
+.drop-content li {
+    border-bottom: 1px solid;
+}
+
+.drop-content li:last-child {
+    border: 0px;
 }
 
 @media only screen and (max-width: 600px) {
@@ -116,16 +171,16 @@ nav {
         width: 80%;
         height: 80vh;
     }
-    .input-box{
+    .input-box {
         margin-top: 40%;
     }
     h1 {
         font-size: 20px;
         top: 8%;
     }
-    span{
+    span {
         font-size: 19px;
-        top:20%;
+        top: 20%;
     }
     .icon {
         width: 30px;
@@ -136,16 +191,16 @@ nav {
     #sign-up {
         font-size: 11px;
     }
-    .search-area span{
+    .search-area span {
         font-size: 10px;
     }
-    .returnToSMA a{
+    .returnToSMA a {
         font-size: 10px;
     }
-    .image{
+    .image {
         display: none;
     }
-    .buttons-area{
+    .buttons-area {
         font-size: 10px;
     }
 }
