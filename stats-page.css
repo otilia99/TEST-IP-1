@@ -3,6 +3,7 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    background-color:rgba(245, 243, 243, 0.377);
     /* background-image: url(./social-media-pattern-.jfif);*/
 }
 
