@@ -1,51 +1,10 @@
-* {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-    list-style: none;
-    font-family: 'Helvetica', sans-serif;
-}
-
-nav {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    min-height: 10vh;
-    width: 100%;
-    background-color: #462BB1;
-}
-
-.logo {
-    letter-spacing: 5px;
-    position: absolute;
-    left: 5%;
-}
-
-.link-list {
-    display: flex;
-    justify-content: space-around;
-    position: absolute;
-    right: 5%;
-}
-
-.link-list a {
-    color: whitesmoke;
-    text-decoration: none;
-    letter-spacing: 2px;
-    font-size: 1.5vh;
-    padding: 10px 15px;
-    font-weight: bold;
-}
-
-#sign-up {
-    border: 1px solid white;
-}
 
 .main {
     min-height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color:rgba(245, 243, 243, 0.377);
 }
 
 .content{
@@ -54,6 +13,7 @@ nav {
     height: 80vh;
     display: flex;
     flex-direction: column;
+    border-radius: 10px;
 }
 
 .search-area{
