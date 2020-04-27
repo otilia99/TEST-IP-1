@@ -3,7 +3,7 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    background-color:rgba(245, 243, 243, 0.377);
+    background-color: rgba(245, 243, 243, 0.377);
     /* background-image: url(./social-media-pattern-.jfif);*/
 }
 
@@ -107,7 +107,7 @@ textarea {
     color: white;
 }
 
-.fa-instagram {
+.fa-flickr {
     background: #125688;
     color: white;
 }
@@ -137,12 +137,12 @@ textarea {
 .wrapper-content div p {
     font-style: italic;
     margin-top: 10px;
-    font-size: 21px;
+    font-size: 17px;
 }
 
 .wrapper-content div h4 {
     color: #3B5998;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .wrapper {
@@ -160,30 +160,11 @@ textarea {
     align-items: center;
 }
 
-.social-btn {
-    width: 80%;
-    height: 7%;
-    border-radius: 20px;
-    text-align: center;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
 .stats-btn {
-    width: 90%;
-    height: 7%;
-    border-radius: 20px;
-    background-color: #1c226b;
     color: white;
     text-align: center;
     text-decoration: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 20px;
 }
-
 
 /*End Social Media Btn*/
 
@@ -233,7 +214,7 @@ textarea {
 }
 
 .drop-content a:hover {
-    background-color: #f1f1f1
+    background-color: #f1f1f1;
 }
 
 .avatar-dropmenu:hover .drop-content {
@@ -284,11 +265,6 @@ textarea {
     height: 20vh;
 }
 
-.stats-btn {
-    height: 25%;
-    width: 250px;
-}
-
 .main-wrapper {
     display: flex;
     flex-direction: column;
@@ -312,6 +288,53 @@ textarea {
     height: 90%;
 }
 
+.stats-container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.drop-links{
+    background-color: #3B5998;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: 90%;
+    display: none;
+    margin-top: -4px;
+}
+
+.drop-links li {
+    border-bottom: 1px solid;
+    padding: 12px 16px;
+    display: block;
+    cursor: pointer;
+    text-align: center;
+    color: rgba(255,255,255, 0.4);
+}
+
+.drop-links li:hover {
+    background-color: #007bb5;
+}
+
+.drop-linksli:last-child {
+    border: 0px;  
+}
+
+.stats-container:hover .drop-links {
+    display: block;
+}
+
+.Addbtn {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    width: 200px;
+    height: 5vh;
+    margin: 10px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.4);
+}
 
 /*dimensiuni semanatoare cu iphone X*/
 
