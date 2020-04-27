@@ -3,7 +3,7 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    background-color:rgba(245, 243, 243, 0.377);
+    background-color: rgba(245, 243, 243, 0.377);
     /* background-image: url(./social-media-pattern-.jfif);*/
 }
 
@@ -137,12 +137,12 @@ textarea {
 .wrapper-content div p {
     font-style: italic;
     margin-top: 10px;
-    font-size: 21px;
+    font-size: 17px;
 }
 
 .wrapper-content div h4 {
     color: #3B5998;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .wrapper {
