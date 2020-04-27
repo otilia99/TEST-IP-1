@@ -48,6 +48,7 @@
     border: none;
     background-color: #1c226b;
     color: white;
+    border-radius: 10px;
 }
 
 .post-content {
@@ -62,7 +63,7 @@
 textarea {
     height: 30%;
     width: 80%;
-    border-radius: 10px;
+   
 }
 
 .main-side-left {
