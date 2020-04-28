@@ -111,6 +111,17 @@ function addFB() {
 
 
 
+/*												FLICKR											*/
+
+function addFlickr() {
+	console.log("Afisez id-ul din addFlickr: " + sessionStorage.getItem("id_user"));
+	var test = sessionStorage.getItem("id_user");
+	var url = "https://web-rfnl5hmkocvsi.azurewebsites.net/DPZ/REST.php?do=login&userId=" + test + "&redirect=https://svlado1270.github.io/TEST-IP/decoy-page.html";
+
+
+	window.open(url, '_blank');
+}
+
 
 /*												TWITTER 										*/
 //...
