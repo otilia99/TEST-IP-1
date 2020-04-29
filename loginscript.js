@@ -123,5 +123,17 @@ function addFlickr() {
 }
 
 
+/*												LINKEDIN										*/
+
+function addLinkedIn() {
+	console.log("Afisez id-ul din addLinkedIn" + sessionStorage.getItem("id_user"));
+	var test = sessionStorage.getItem("id_user");
+	var url = "http://sma-a4.herokuapp.com/linkedin/auth?redirect_url=https://svlado1270.github.io/TEST-IP/decoy-page.html";
+
+
+	window.open(url, '_blank')
+}
+
+
 /*												TWITTER 										*/
 //...
