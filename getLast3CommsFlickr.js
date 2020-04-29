@@ -1,11 +1,10 @@
-function getLastComms () {
+function getLast3CommsFlickr () {
+  
   var xhttp
-  var postID = '112510383726603_128873248756983' // Cel mai probabil pe viitor vom salva id-ul postarii in functie de cea pe care o alege utilizatorul (TBD)
-  var url = 'https://web-rfnl5hmkocvsi.azurewebsites.net/FBFINAL/REST.php?do=last3comments&postId=' + postID + '&fbid=' + sessionStorage.getItem('id_user')
+  var postID = '49765475798'
+  var url = 'https://web-rfnl5hmkocvsi.azurewebsites.net/DPZ/REST.php?do=last3comments&postId=' + postID + '&userid=' + sessionStorage.getItem('id_user')
 
   console.log(url)
-
-  var displayed = 0
 
   if (window.XMLHttpRequest) {
     xhttp = new XMLHttpRequest()
@@ -20,15 +19,12 @@ function getLastComms () {
       alert_message = ''
 
       removeChildren()
-      for (var i = 0; i < obj.COMMENTS.length; i++) {
-        var temp = obj.COMMENTS[i]
-        alert_message = alert_message + temp[0] + ' Postat de: ' + temp[1]
-        modifyHTML(temp[0], temp[1])
-        // console.log(temp);
+      for (var i = 0; i < obj.length; i++) {
+        alert_message = alert_message + 'Author: ' + obj[i].AUTHOR + ' AuthorId: ' + obj[i].AUTHORID + ' Comment: ' + obj[i].COMMENT + '\n'
+        modifyHTML(obj[i].COMMENT, obj[i].AUTHOR)
       }
-
       console.log(alert_message)
-      // alert(alert_message);
+      // alert(alert_message);*/
     }
   }
 
@@ -36,7 +32,7 @@ function getLastComms () {
   xhttp.send(null)
 }
 
-function modifyHTML (comentariu, owner) {
+function modifyHTML (owner, comentariu) {
   var elem = document.createElement('div')
   var heading = document.createElement('h4')
   var comment = document.createElement('p')
@@ -56,4 +52,3 @@ function removeChildren () {
     myNode.removeChild(myNode.lastElementChild)
   }
 }
-
