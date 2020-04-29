@@ -1,4 +1,4 @@
-function postImage() {
+function postImageFlickr() {
     /*Post to Imgur*/
     var image_url;
     img_url = 'https://api.imgur.com/3/image';
@@ -17,10 +17,10 @@ function postImage() {
             console.log(response.data);
             image_url = response.data.link;
             /*al doilea request*/
-            var url = "https://web-rfnl5hmkocvsi.azurewebsites.net/FBFINAL/REST.php?do=PostImage&";
-            var fb_id = sessionStorage.getItem("id_user");
+            var url = "https://web-rfnl5hmkocvsi.azurewebsites.net/DPZ/REST.php?do=PostImage&";
+            var id = sessionStorage.getItem("id_user");
             var message = document.getElementById("source").value;
-            var requestedData = `${url}image=${image_url}&mesaj=${message}&fbid=${fb_id}&submit=Image`;
+            var requestedData = `${url}message=${message}&userid=${id}&url=${image_url}&submit=PostImage`;
             console.log(requestedData);
 
             var displayed = 0;
