@@ -56,3 +56,4 @@ function removeChildren () {
     myNode.removeChild(myNode.lastElementChild)
   }
 }
+
