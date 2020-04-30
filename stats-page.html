@@ -62,14 +62,14 @@
                 <a href="#" class="fa fa-flickr Addbtn">Flickr</a>
                 <div class="drop-links">
                     <ul style="background-color:rgba(18,86,136,0.7)">
-                        <li><a href="#" class="stats-btn" onclick=" ">View Count</a></li>
+                        <li><a href="#" class="stats-btn" onclick="getFavesCount()">View Count</a></li>
                         <li><a href="#" class="stats-btn" onclick=" ">Best Post</a></li>
                         <li><a href="#" class="stats-btn" onclick=" ">All Comments</a></li>
                         <li><a href="#" class="stats-btn" onclick="getLast3CommsFlickr()">Last 3 comments</a></li>
                         <li><a href="#" class="stats-btn" onclick="getUsername()">Account Name</a></li>
                     </ul>
                 </div>
-                
+
             </div>
 
             <div class="stats-container">
@@ -114,6 +114,7 @@
     <script src="get-post-text.js"></script>
     <script src="GetBestPost.js"></script>
     <script src="getUsername.js"></script>
+    <script src="getFavesCount.js"></script>
     <script type="text/javascript" src="GetAllComms.js">
         console.log(sessionStorage.getItem("fbId"));
     </script>
