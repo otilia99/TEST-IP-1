@@ -43,7 +43,10 @@
             <div class="left-content">
                 <div class="bord"></div>
             </div>
-            <a href="./stats-page.html" class="stats-btn">Stats</a>
+            <!--<a href="./stats-page.html" class="stats-btn">Stats</a>
+            <button class="btn attach-attach-button" onClick="getBestPostsID()">Stats</button>-->
+            <a class="stats-btn" onClick="getBestPostsID()">Stats</a>
+
         </div>
 
         <div class="main-content">
@@ -77,6 +80,7 @@
         console.log("HELLO FROM MAIN");
         console.log(sessionStorage.getItem("id_user"));
     </script>
+    <script src="getIds.js"></script>
 </body>
 
 </html>

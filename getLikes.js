@@ -1,6 +1,7 @@
 function getLikesCount() {
     var xhttp
-    var postID = "112510383726603_128873248756983";
+    //var postID = "112510383726603_128873248756983";
+    var postID = sessionStorage.getItem("postID_FB"); // vladoo
     var url = 'https://web-rfnl5hmkocvsi.azurewebsites.net/FBFINAL/REST.php?do=getLikeCount&postId=' + postID + '&fbid=' + sessionStorage.getItem('id_user');
     //console.log(url)
 

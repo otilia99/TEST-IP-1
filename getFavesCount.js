@@ -2,9 +2,10 @@ function getFavesCount() {
     var xhttp;
     //https://web-rfnl5hmkocvsi.azurewebsites.net/DPZ/REST.php?do=getFaveCount&postId=49765475798&userid=69420
     var id = sessionStorage.getItem("id_user");
-    var postId = '49765475798';
+    //var postId = '49765475798';
+    var postId = sessionStorage.getItem("postID_FLICKR");
     var data = 'https://web-rfnl5hmkocvsi.azurewebsites.net/DPZ/REST.php?do=getFaveCount';
-    var url = `${data}&postId${postId}&userid=${id}`;
+    var url = `${data}&postId=${postId}&userid=${id}`;
     console.log(url);
 
     var displayed = 0;
@@ -17,7 +18,7 @@ function getFavesCount() {
 
     xhttp.onreadystatechange = function() {
 
-        console.log('sunt aici');
+        //console.log('sunt aici');
         if (this.readyState == 4 && this.status == 200) {
 
             console.log(xhttp.response);

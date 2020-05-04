@@ -1,7 +1,8 @@
 function getLast3CommsFlickr () {
   
   var xhttp
-  var postID = '49765475798'
+  //var postID = '49765475798'
+  var postID = sessionStorage.getItem("postID_FLICKR"); // vladoo
   var url = 'https://web-rfnl5hmkocvsi.azurewebsites.net/DPZ/REST.php?do=last3comments&postId=' + postID + '&userid=' + sessionStorage.getItem('id_user')
 
   console.log(url)

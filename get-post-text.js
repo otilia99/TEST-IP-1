@@ -2,7 +2,8 @@ function getPostText() {
 
     var xhttp;
     var fbid = sessionStorage.getItem("id_user");
-    var postid = "112510383726603_128873248756983";
+    //var postid = "112510383726603_128873248756983";
+    var postid = sessionStorage.getItem("postID_FB");
     var url = "https://web-rfnl5hmkocvsi.azurewebsites.net/FBFINAL/REST.php?do=getText&postId=" + postid + "&fbid=" + fbid;
     console.log(url);
 
