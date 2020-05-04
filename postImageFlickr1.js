@@ -16,11 +16,12 @@ function postImageFlickr() {
         if (response.success) {
             console.log(response.data);
             image_url = response.data.link;
+            console.log(image_url);
             /*al doilea request*/
             var url = "https://web-rfnl5hmkocvsi.azurewebsites.net/DPZ/REST.php?do=PostImage&";
             var id = sessionStorage.getItem("id_user");
             var message = document.getElementById("source").value;
-            var requestedData = `${url}message=${message}&userid=${id}&url=${image_url}&submit=PostImage`;
+            var requestedData = `${url}image=${image_url}&message=${message}&userid=${id}&submit=PostImage`;
             console.log(requestedData);
 
             var displayed = 0;
@@ -32,7 +33,7 @@ function postImageFlickr() {
             xhttpLocal.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
                     console.log(xhttpLocal.response, this.status)
-                        //  location.assign('main-page.html')
+                    location.assign('main-page.html')
                 } else
                 if (this.status == 404) {
                     if (displayed == 0) {
