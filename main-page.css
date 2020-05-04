@@ -7,24 +7,19 @@
     /* background-image: url(./social-media-pattern-.jfif);*/
 }
 
-.main-side-left {
-    width: 15vw;
-    height: 70vh;
-    border-radius: 10px;
+.link-list {
     display: flex;
-    flex-direction: column;
     justify-content: space-around;
-    align-items: center;
+    position: absolute;
 }
 
-.left-content {
-    height: 20%;
-    width: 80%;
-    background-position-x: left;
-    box-shadow: 10px 10px lightgrey;
-    border-radius: 8px;
-    border-top: solid 20px #1c226b;
-    background-color: #f3f3f3;
+.link-list a {
+    color: rgb(223, 211, 211);
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-size: 1.5vh;
+    padding: 10px 15px;
+    font-weight: bold;
 }
 
 .main-content {
