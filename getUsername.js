@@ -22,7 +22,7 @@ function getUsername() {
             var obj = JSON.parse(this.responseText);
             removeChilds();
             var comentariu = obj.FULLNAME;
-            modifyUsername(comentariu);
+            modific(comentariu);
 
         } else
         if (this.status == 404) {
@@ -40,7 +40,7 @@ function getUsername() {
     xhttp.send(null);
 }
 
-function modifyUsername(comentariu) {
+function modific(comentariu) {
 
     console.log("sunt in functie");
     var elem = document.createElement("div")
