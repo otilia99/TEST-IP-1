@@ -4,7 +4,8 @@ function getComm() {
     var url = 'https://web-rfnl5hmkocvsi.azurewebsites.net/FBFINAL/REST.php?';
     var get_comm = 'getComments';
     //var postId = '112510383726603_127510862226555';
-    var postId = "112510383726603_128873248756983"; //VLADOOO
+    //var postId = "112510383726603_128873248756983"; //VLADOOO
+    var postId = sessionStorage.getItem("postID_FB"); // ALSO VLADOO
     var fbId = sessionStorage.getItem("id_user");
 
     var result = [];
