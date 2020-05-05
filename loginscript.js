@@ -136,4 +136,24 @@ function addLinkedIn() {
 
 
 /*												TWITTER 										*/
-//...
+
+function addTwitter() {
+	console.log("Afisez id-ul din addTwitter" + sessionStorage.getItem("id_user"));
+	var test = sessionStorage.getItem("id_user");
+	var url = "http://sma-a4.herokuapp.com/twitter/auth?redirect_url=https://svlado1270.github.io/TEST-IP/decoy-page.html";
+
+
+	window.open(url, '_blank')
+}
+
+
+/*												TUMBLR											*/
+
+function addTumblr() {
+	console.log("Afisez id-ul din addTumblr" + sessionStorage.getItem("id_user"));
+	var test = sessionStorage.getItem("id_user");
+	var url = "http://sma-a4.herokuapp.com/tumblr/auth?redirect_url=https://svlado1270.github.io/TEST-IP/decoy-page.html";
+
+
+	window.open(url, '_blank')
+}
