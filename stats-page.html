@@ -53,7 +53,7 @@
                         <li><a href="#" class="stats-btn" onclick=" ">Best Post</a></li>
                         <li><a href="#" class="stats-btn" onclick=" ">All Comments</a></li>
                         <li><a href="#" class="stats-btn" onclick=" ">Last 3 comments</a></li>
-                        <li><a href="#" class="stats-btn" onclick=" ">Account Name</a></li>
+                        <li><a href="#" class="stats-btn" onclick="retrieveProfileTwitter()">Account Name</a></li>     <!-- GET http://sma-a4.herokuapp.com/<platform>/profile -->
                     </ul>
                 </div>
             </div>
@@ -121,10 +121,12 @@
     <script type="text/javascript" src="getAllCommsFlickr.js">
         console.log(sessionStorage.getItem("fbId"));
     </script>
+    <script type="text/javascript" src="retrieveProfileTwitter.js"></script>
     <script type=text/javascript>
         console.log("Sunt in stats page")
         console.log(sessionStorage.getItem("postID_FLICKR"));
-        console.log(sessionStorage.getItem("postID_FB"))
+        console.log(sessionStorage.getItem("postID_FB"));
+        console.log(sessionStorage.getItem("current_email"));
     </script>
 
 </body>
