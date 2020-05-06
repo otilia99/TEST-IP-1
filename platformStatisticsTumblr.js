@@ -1,9 +1,9 @@
 function getStatisticsTumblr(){
 	const invocation = new XMLHttpRequest();
-      const url = "http://sma-a4.herokuapp.com/";
+      const url = "https://sma-a4.herokuapp.com/";
       //http://sma-a4.herokuapp.com/nume_platforma/profile
-      const nume_platforma = "tumblr/"		// se seteaza in functie de ce e nevoie	
-      const actiune = "profile/posts/stats"				// se seteaza in functie de ce e nevoie
+      const nume_platforma = "tumblr/"	
+      const actiune = "profile/posts/stats"			
 
         if (!invocation) return;
         const requestDataLogin = `email=${sessionStorage.getItem("current_email")}&password=${sessionStorage.getItem("current_pass")}`;
@@ -31,15 +31,6 @@ function getStatisticsTumblr(){
             removeChildren();
 
             alert_message = '';
-
-            // {
-            //     "comments_avg": 0.25,
-            //     "comments_sum": 5,
-            //     "likes_avg": 0.15,
-            //     "likes_sum": 3,
-            //     "shares_avg": 0.25,
-            //     "shares_sum": 5
-            // }
 
             alert_message = alert_message + 'AVG_COMM: ' + obj.comments_avg+ '\n'+ 'SUM_COMM: ' + obj.comments_sum+ '\n'+ 'likes_avg: ' + obj.likes_avg+ '\n' + 'Likes_sum: ' + obj.likes_sum+ '\n' + 'shares_avg: ' + obj.shares_avg+ '\n'+ 'shares_sum: ' + obj.shares_sum;
             modifyHTML( obj.comments_avg, obj.comments_sum,  obj.likes_sum, obj.likes_avg, obj.shares_sum ,obj.shares_avg);
