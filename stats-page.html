@@ -49,10 +49,10 @@
                 <a href="#" class="fa fa-twitter Addbtn">Twitter</a>
                 <div class="drop-links">
                     <ul style="background-color:rgb(111, 180, 233)">
-                        <li><a href="#" class="stats-btn" onclick=" ">View Count</a></li>
-                        <li><a href="#" class="stats-btn" onclick=" ">Best Post</a></li>
-                        <li><a href="#" class="stats-btn" onclick=" ">All Comments</a></li>
-                        <li><a href="#" class="stats-btn" onclick=" ">Last 3 comments</a></li>
+                        <li><a href="#" class="stats-btn" onclick="retrievePostsTwitter()">View Posts Stats</a></li>
+                        <li><a href="#" class="stats-btn" onclick="retrievePostInfoTwitter()">Posts information</a></li>
+                        <li><a href="#" class="stats-btn" onclick="retrievePostsRanking()">Posts Ranking</a></li>
+                        <li><a href="#" class="stats-btn" onclick="retrieveStats()">View Stats</a></li>
                         <li><a href="#" class="stats-btn" onclick="retrieveProfileTwitter()">Account Name</a></li>     <!-- GET http://sma-a4.herokuapp.com/<platform>/profile -->
                     </ul>
                 </div>
@@ -76,10 +76,10 @@
                 <a href="#" class="fa fa-tumblr Addbtn">Tumblr</a>
                 <div class="drop-links">
                     <ul style="background-color:rgba(44,71,98, 0.7)">
-                        <li><a href="#" class="stats-btn" onclick=" ">View Count</a></li>
-                        <li><a href="#" class="stats-btn" onclick=" ">Best Post</a></li>
-                        <li><a href="#" class="stats-btn" onclick=" ">All Comments</a></li>
-                        <li><a href="#" class="stats-btn" onclick=" ">Last 3 comments</a></li>
+                        <li><a href="#" class="stats-btn" onclick="retrieveProfileTumblr()">View profile info</a></li>
+                        <li><a href="#" class="stats-btn" onclick="retrievePostsTumblr()">View all posts</a></li>
+                        <li><a href="#" class="stats-btn" onclick="retrievePostInfoTumblr()">View post stats</a></li>
+                        <li><a href="#" class="stats-btn" onclick=" getStatisticsTumblr()">Platform statistics</a></li>
                         <li><a href="#" class="stats-btn" onclick=" ">Account Name</a></li>
                     </ul>
                 </div>
@@ -90,7 +90,7 @@
                 <div class="drop-links">
                     <ul style="background-color:#0e87be">
                         <li><a href="#" class="stats-btn" onclick=" ">View Count</a></li>
-                        <li><a href="#" class="stats-btn" onclick=" ">Best Post</a></li>
+                        <li><a href="#" class="stats-btn" onclick=" ">All Posts</a></li>
                         <li><a href="#" class="stats-btn" onclick=" ">All Comments</a></li>
                         <li><a href="#" class="stats-btn" onclick=" ">Last 3 comments</a></li>
                         <li><a href="#" class="stats-btn" onclick=" ">Account Name</a></li>
@@ -101,13 +101,19 @@
         </div>
 
         <div class="wrapper">
-            <div class="wrapper-content" id="content-area">
+            <div class="wrapper-content" id="content-area" style="overflow-y: scroll; border-bottom: 0px;">
 
             </div>
         </div>
-
     </section>
-
+    <script src="retrieveProfileTwitter.js"></script>
+    <script src="retrievePostsTwitter.js"></script>
+    <script src="retrieveStats.js"></script>
+    <script src="retrievePostInfoTwitter.js"></script>
+    <script src="platformStatisticsTumblr.js"></script>
+    <script src="retrievePostInfoTumblr.js"></script>
+    <script src="retrievePostsTumblr.js"></script>
+    <script src="retrieveProfileTumblr.js"></script>
     <script src="getLast3CommsFlickr.js"></script>
     <script src="GetLastComms.js"></script>
     <script src="getLikes.js"></script>
