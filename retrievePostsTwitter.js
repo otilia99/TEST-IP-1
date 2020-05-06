@@ -1,4 +1,4 @@
-function retrieveProfileTwitter () {
+function retrievePostsTwitter () {
   const invocation = new XMLHttpRequest()
   const url = 'https://sma-a4.herokuapp.com/'
   // http://sma-a4.herokuapp.com/nume_platforma/profile
@@ -20,17 +20,21 @@ function retrieveProfileTwitter () {
   var tempo = 0
 
   invocation.onreadystatechange = function () {
-    if (tempo == 4) {
+    if (tempo == 4) {	// jeez christ bad code af dar asigura ca veti primi doar raspunsul la final (json-ul pe care-l asteptati)
+      // console.log(this.response)
       var responseLines = this.responseText.split('\n')
       console.log(responseLines[1])
       var obj = JSON.parse(responseLines[1])
+      alert_message = ''
       removeChildren()
-      modifyHTMLProfile(obj.name, obj.followers, obj.id)
-
+      for (var i = 0; i < obj.posts.length; i++) {
+        alert_message = alert_message + 'Text: ' + obj.posts[i].text + ' Id: ' + obj.posts[i].id + '\n'
+        modifyHTML(obj.posts[i].text)
+      }
     } else { tempo++ }
     if (count == 0) {
       count = 1
-      this.open('GET', url + nume_platforma + actiune, true)
+      this.open('GET', url + nume_platforma + actiune + '/posts', true)
       this.send()
     }
   }
@@ -38,20 +42,12 @@ function retrieveProfileTwitter () {
   invocation.send(requestDataLogin)
 }
 
-function modifyHTMLProfile (owner, comentariu, id) {
+function modifyHTML (comentariu) {
   var elem = document.createElement('div')
-  var heading = document.createElement('h4')
   var comment = document.createElement('p')
-  var id_p = document.createElement('p')
-  var comm_text = document.createTextNode('Followers: ' + comentariu)
-  var id_node = document.createTextNode('Id: ' + id)
-  var node = document.createTextNode('@' + owner)
-  heading.appendChild(node)
+  var comm_text = document.createTextNode(comentariu)
   comment.appendChild(comm_text)
-  id_p.appendChild(id_node)
-  elem.appendChild(heading)
   elem.appendChild(comment)
-  elem.appendChild(id_p)
   var original = document.getElementById('content-area')
   original.append(elem)
 }
