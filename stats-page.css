@@ -136,6 +136,7 @@ textarea {
     width: 80%;
     height: 20%;
     border-bottom: 1px solid #2c4762;
+    overflow-y: scroll;
 }
 
 .wrapper-content div p {
