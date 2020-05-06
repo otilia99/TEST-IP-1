@@ -5,6 +5,11 @@ function loginFunction() {
     var emailLogin = document.getElementById("emailLogin");
     var passLogin = document.getElementById("passLogin");
 
+	// pt fucking twitter-tumblr-linkedin kms
+
+    sessionStorage.setItem("current_email", emailLogin.value);
+    sessionStorage.setItem("current_pass", passLogin.value);
+
     if (validateMailLogin(emailLogin) && validatePassLogin(passLogin)) {
 
 		const invocation = new XMLHttpRequest();
@@ -36,6 +41,8 @@ function loginFunction() {
           													// sessionStorage in loc de localStorage. De ce ? -> sS e pe sesiune iar lS este pentru toata aplicatia (In esenta: lS nu va permite mai multe taburi sa functioneze in paralel cum trebuie)
 
           		console.log("id: " + id_user);
+          		console.log("id: " + sessionStorage.getItem("id_user"));
+          		console.log("email: " + sessionStorage.getItem("current_email"));
           		countResponse++;
           		location.assign("main-page.html");
           	}
@@ -136,4 +143,24 @@ function addLinkedIn() {
 
 
 /*												TWITTER 										*/
-//...
+
+function addTwitter() {
+	console.log("Afisez id-ul din addTwitter" + sessionStorage.getItem("id_user"));
+	var test = sessionStorage.getItem("id_user");
+	var url = "http://sma-a4.herokuapp.com/twitter/auth?redirect_url=https://svlado1270.github.io/TEST-IP/decoy-page.html";
+
+
+	window.open(url, '_blank')
+}
+
+
+/*												TUMBLR											*/
+
+function addTumblr() {
+	console.log("Afisez id-ul din addTumblr" + sessionStorage.getItem("id_user"));
+	var test = sessionStorage.getItem("id_user");
+	var url = "http://sma-a4.herokuapp.com/tumblr/auth?redirect_url=https://svlado1270.github.io/TEST-IP/decoy-page.html";
+
+
+	window.open(url, '_blank')
+}
