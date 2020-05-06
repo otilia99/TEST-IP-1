@@ -141,7 +141,7 @@ textarea {
 
 .wrapper-content div p {
     font-style: italic;
-    margin-top: 10px;
+    margin-top: 20px;
     font-size: 17px;
 }
 
@@ -159,7 +159,6 @@ textarea {
 /*elements generated from JS end*/
 
 .wrapper-content {
-    display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
