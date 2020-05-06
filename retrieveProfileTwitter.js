@@ -39,3 +39,27 @@ function retrieveProfileTwitter() {
     invocation.send(requestDataLogin);
 
 }
+
+function modifyHTMLProfile(owner, comentariu, id) {
+    var elem = document.createElement('div')
+    var heading = document.createElement('h4')
+    var comment = document.createElement('p')
+    var id_p = document.createElement('p')
+    var comm_text = document.createTextNode('Followers: ' + comentariu)
+    var id_node = document.createTextNode('Id: ' + id)
+    var node = document.createTextNode('@' + owner)
+    heading.appendChild(node)
+    comment.appendChild(comm_text)
+    id_p.appendChild(id_node)
+    elem.appendChild(heading)
+    elem.appendChild(comment)
+    elem.appendChild(id_p)
+    var original = document.getElementById('content-area')
+    original.append(elem)
+}
+
+function removeChildren() {
+    const myNode = document.getElementById('content-area')
+    while (myNode.lastElementChild) {
+        myNode.removeChild(myNode.lastElementChild)
+    }
