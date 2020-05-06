@@ -1,9 +1,9 @@
 function retrievePostInfoTumblr(){
 	const invocation = new XMLHttpRequest();
-      const url = "http://sma-a4.herokuapp.com/";
+      const url = "https://sma-a4.herokuapp.com/";
       //http://sma-a4.herokuapp.com/nume_platforma/profile
-      const nume_platforma = "tumblr/"		// se seteaza in functie de ce e nevoie	
-      const actiune = "post/617365962716479488"				// se seteaza in functie de ce e nevoie
+      const nume_platforma = "tumblr/"	
+      const actiune = "post/617365962716479488"			
 
         if (!invocation) return;
         const requestDataLogin = `email=${sessionStorage.getItem("current_email")}&password=${sessionStorage.getItem("current_pass")}`;
@@ -31,15 +31,6 @@ function retrievePostInfoTumblr(){
             removeChildren();
 
             alert_message = '';
-
-            /*{
-                "comments_count": 0,
-                "created_at": 1587913444.0,
-                "id": "6660191712540938241",
-                "likes": 0,
-                "shares": 0,
-                "text": "Test Share2!"
-            }*/
 
             alert_message = alert_message + 'ID: ' + obj.id+ '\n'+ 'Number comments: ' + obj.comments_count+ '\n'+ 'Date created: ' + obj.created_at+ '\n'+ 'Number likes: ' + obj.likes+ '\n' + 'Number shares: ' + obj.shares+ '\n' + 'Text: ' + obj.text+ '\n';
             modifyHTML( obj.id, obj.comments_count, obj.created_at ,obj.likes, obj.shares, obj.text);

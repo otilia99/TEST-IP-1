@@ -1,6 +1,6 @@
 function retrievePostsTumblr(){
 	const invocation = new XMLHttpRequest();
-      const url = "http://sma-a4.herokuapp.com/";
+      const url = "https://sma-a4.herokuapp.com/";
       const nume_platforma = "tumblr/"	
       const actiune = "profile/posts"				
 
