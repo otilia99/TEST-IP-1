@@ -2,7 +2,7 @@ function retrieveStats() {
     const invocation = new XMLHttpRequest()
     const url = 'https://sma-a4.herokuapp.com/'
         // http://sma-a4.herokuapp.com/nume_platforma/profile
-    const platforma = 'twitter/' // se seteaza in functie de ce e nevoie
+    const platforma = 'linkedin/' // se seteaza in functie de ce e nevoie
     const actiune = 'profile/posts/' // se seteaza in functie de ce e nevoie
 
     if (!invocation) return
@@ -20,7 +20,7 @@ function retrieveStats() {
     var tempo = 0
 
     invocation.onreadystatechange = function() {
-        if (tempo == 4) { // jeez christ bad code af dar asigura ca veti primi doar raspunsul la final (json-ul pe care-l asteptati)
+        if (tempo == 4) { // jeez christ bad code af dar asigura ca veti primi doar raspunsul la final (json-ul pe care-l asteptati) --speram
             // console.log(this.response)
             var responseLines = this.responseText.split('\n')
             console.log(responseLines[1])
