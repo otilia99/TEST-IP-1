@@ -1,8 +1,8 @@
-function retrieveProfileTwitterPost() {
+function retrieveProfileTumblrPost() {
     const invocation = new XMLHttpRequest();
     const url = "https://sma-a4.herokuapp.com/";
     //http://sma-a4.herokuapp.com/nume_platforma/profile
-    const nume_platforma = "twitter/" // se seteaza in functie de ce e nevoie	
+    const nume_platforma = "tumblr/" // se seteaza in functie de ce e nevoie	
     const actiune = "post" // se seteaza in functie de ce e nevoie
 
     var id = sessionStorage.getItem("id_user");
