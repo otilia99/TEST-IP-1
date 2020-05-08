@@ -1,6 +1,6 @@
 function retrieveStats() {
     const invocation = new XMLHttpRequest()
-    const url = 'http://sma-a4.herokuapp.com/'
+    const url = 'https://sma-a4.herokuapp.com/'
         // http://sma-a4.herokuapp.com/nume_platforma/profile
     const platforma = 'linkedin/' // se seteaza in functie de ce e nevoie
     const actiune = 'profile/posts/' // se seteaza in functie de ce e nevoie

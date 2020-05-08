@@ -1,6 +1,6 @@
 function retrieveProfileTwitter() {
     const invocation = new XMLHttpRequest();
-    const url = "http://sma-a4.herokuapp.com/";
+    const url = "https://sma-a4.herokuapp.com/";
     //http://sma-a4.herokuapp.com/nume_platforma/profile
     const nume_platforma = "twitter/" // se seteaza in functie de ce e nevoie	
     const actiune = "profile" // se seteaza in functie de ce e nevoie
