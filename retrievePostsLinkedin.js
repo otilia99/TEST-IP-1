@@ -1,4 +1,4 @@
-function retrievePostsTwitter() {
+function retrievePostsLinkedin() {
     const invocation = new XMLHttpRequest()
     const url = 'https://sma-a4.herokuapp.com/'
         // http://sma-a4.herokuapp.com/nume_platforma/profile
