@@ -29,7 +29,7 @@ function retrievePostsTwitter () {
       removeChildren()
       for (var i = 0; i < obj.posts.length; i++) {
         alert_message = alert_message + 'Text: ' + obj.posts[i].text + ' Id: ' + obj.posts[i].id + '\n'
-        modifyHTML(obj.posts[i].text)
+        modifyHTMLTwitterPost(obj.posts[i].text)
       }
     } else { tempo++ }
     if (count == 0) {
@@ -42,7 +42,7 @@ function retrievePostsTwitter () {
   invocation.send(requestDataLogin)
 }
 
-function modifyHTML (comentariu) {
+function modifyHTMLTwitterPost (comentariu) {
   var elem = document.createElement('div')
   var comment = document.createElement('p')
   var comm_text = document.createTextNode(comentariu)
