@@ -1,9 +1,9 @@
-function retrievePostInfoTumblr() {
+function retrievePostInfoLinkedin() {
     const invocation = new XMLHttpRequest();
     const url = "https://sma-a4.herokuapp.com/";
     //http://sma-a4.herokuapp.com/nume_platforma/profile
     const nume_platforma = "linkedin/"
-    const actiune = "post/" //habar n am ce post
+    const actiune = "post/6664832531449413632" //habar n am ce post
 
     if (!invocation) return;
     const requestDataLogin = `email=${sessionStorage.getItem("current_email")}&password=${sessionStorage.getItem("current_pass")}`;
