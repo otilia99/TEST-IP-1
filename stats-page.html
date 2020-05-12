@@ -53,7 +53,8 @@
                         <li><a href="#" class="stats-btn" onclick="retrievePostInfoTwitter()">Posts information</a></li>
                         <li><a href="#" class="stats-btn" onclick="retrievePostsRankingTwitter()">Posts Ranking</a></li>
                         <li><a href="#" class="stats-btn" onclick="retrieveStats()">View Stats</a></li>
-                        <li><a href="#" class="stats-btn" onclick="retrieveProfileTwitter()">Account Name</a></li>     <!-- GET http://sma-a4.herokuapp.com/<platform>/profile -->
+                        <li><a href="#" class="stats-btn" onclick="retrieveProfileTwitter()">Account Name</a></li>
+                        <!-- GET http://sma-a4.herokuapp.com/<platform>/profile -->
                     </ul>
                 </div>
             </div>
@@ -80,7 +81,7 @@
                         <li><a href="#" class="stats-btn" onclick="retrievePostsTumblr()">View all posts</a></li>
                         <li><a href="#" class="stats-btn" onclick="retrievePostsRankingTumblr()">Posts Ranking</a></li>
                         <li><a href="#" class="stats-btn" onclick="retrievePostInfoTumblr()">View post stats</a></li>
-                        <li><a href="#" class="stats-btn" onclick=" getStatisticsTumblr()">Platform statistics</a></li>
+                        <li><a href="#" class="stats-btn" onclick="getStatisticsTumblr()">Platform statistics</a></li>
                         <li><a href="#" class="stats-btn" onclick=" ">Account Name</a></li>
                     </ul>
                 </div>
@@ -90,12 +91,11 @@
                 <a href="#" class="fa fa-linkedin Addbtn">LinkedIn</a>
                 <div class="drop-links">
                     <ul style="background-color:#0e87be">
-                        <li><a href="#" class="stats-btn" onclick=" ">View Count</a></li>
-                        <li><a href="#" class="stats-btn" onclick=" ">All Posts</a></li>
+                        <li><a href="#" class="stats-btn" onclick="retrieveProfileLinkedin()">View profile info</a></li>
+                        <li><a href="#" class="stats-btn" onclick="retrievePostsLinkedin()">View all posts</a></li>
                         <li><a href="#" class="stats-btn" onclick="retrievePostsRankingLinkedIn()">Posts Ranking</a></li>
-                        <li><a href="#" class="stats-btn" onclick=" ">All Comments</a></li>
-                        <li><a href="#" class="stats-btn" onclick=" ">Last 3 comments</a></li>
-                        <li><a href="#" class="stats-btn" onclick=" ">Account Name</a></li>
+                        <li><a href="#" class="stats-btn" onclick="retrievePostInfoLinkedin()">View post stats</a></li>
+                        <li><a href="#" class="stats-btn" onclick="getStatisticsLinkedin()">Platform statistics</a></li>
                     </ul>
                 </div>
             </div>
@@ -117,6 +117,10 @@
     <script src="retrievePostInfoTumblr.js"></script>
     <script src="retrievePostsTumblr.js"></script>
     <script src="retrieveProfileTumblr.js"></script>
+    <script src="retrievePostInfoLinkedin.js"></script>
+    <script src="retrievePostsLinkedin.js"></script>
+    <script src="platformStatisticsLinkedin.js"></script>
+    <script src="retrieveProfileLinkedin.js"></script>
     <script src="getLast3CommsFlickr.js"></script>
     <script src="GetLastComms.js"></script>
     <script src="getLikes.js"></script>
