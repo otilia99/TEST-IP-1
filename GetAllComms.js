@@ -6,11 +6,11 @@ function getComm() {
     //var postId = '112510383726603_127510862226555';
     //var postId = "112510383726603_128873248756983"; //VLADOOO
     var postId = sessionStorage.getItem("postID_FB"); // ALSO VLADOO
-    var fbId = sessionStorage.getItem("id_user");
+    var jwt = sessionStorage.getItem("token");
 
     var result = [];
 
-    const requestData = `${url}do=${get_comm}&postId=${postId}&fbid=${fbId}`;
+    const requestData = `${url}do=${get_comm}&postId=${postId}&jwt=${jwt}`;
     console.log(requestData);
 
     if (window.XMLHttpRequest) {
