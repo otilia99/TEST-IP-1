@@ -5,7 +5,7 @@ function retrieveProfileTwitterPost() {
     const nume_platforma = "twitter/" // se seteaza in functie de ce e nevoie	
     const actiune = "post" // se seteaza in functie de ce e nevoie
 
-    var id = sessionStorage.getItem("id_user");
+    var id = sessionStorage.getItem("token");
     var message = document.getElementById("source").value;
     var image = document.getElementById("test").files[0];
     var urlLocal = getUrl();

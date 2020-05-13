@@ -2,7 +2,7 @@ function getLastComms () {
   var xhttp
   //var postID = '112510383726603_128873248756983' // Cel mai probabil pe viitor vom salva id-ul postarii in functie de cea pe care o alege utilizatorul (TBD)
   var postID = sessionStorage.getItem("postID_FB"); // vlado
-  var url = 'https://web-rfnl5hmkocvsi.azurewebsites.net/FBFINAL/REST.php?do=last3comments&postId=' + postID + '&fbid=' + sessionStorage.getItem('id_user')
+  var url = 'https://web-rfnl5hmkocvsi.azurewebsites.net/FBFINAL/REST.php?do=last3comments&postId=' + postID + '&jwt=' + sessionStorage.getItem('token')
 
   console.log(url)
 

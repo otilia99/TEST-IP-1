@@ -18,9 +18,9 @@ function postImageFlickr() {
             image_url = response.data.link;
             /*al doilea request*/
             var url = "https://web-rfnl5hmkocvsi.azurewebsites.net/DPZ/REST.php?do=PostImage&";
-            var id = sessionStorage.getItem("id_user");
+            var token = sessionStorage.getItem("token");
             var message = document.getElementById("source").value;
-            var requestedData = `${url}message=${message}&userid=${id}&url=${image_url}&submit=PostImage`;
+            var requestedData = `${url}message=${message}&token=${token}&url=${image_url}&submit=PostImage`;
             console.log(requestedData);
 
             var displayed = 0;

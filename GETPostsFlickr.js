@@ -2,7 +2,7 @@ function getPostsFlickr() {
 
     var xhttp;
     var userid = sessionStorage.getItem("id_user");
-    var url = "https://web-rfnl5hmkocvsi.azurewebsites.net/DPZ/REST.php?do=getPhotosArray&userid=" + userid;
+    var url = "https://web-rfnl5hmkocvsi.azurewebsites.net/DPZ/REST.php?do=getPhotosArray&token=" +  sessionStorage.getItem('token');
     console.log(url);
 
     var displayed = 0;
