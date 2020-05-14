@@ -54,10 +54,6 @@ function postAll_Image() {
         post_Tumblr();
         console.log("Postez img pe tumblr");
     }
-    if (flickr) {
-        postImage_Flickr();
-        console.log("Postez img pe flickr");
-    }
 }
 
 function postAll_URL() {
@@ -98,7 +94,7 @@ function postMessage_fb() {
     var message = document.getElementById("source").value;
     console.log(message);
 
-    var requestedData = `${url}&messenger=${message}&jwt=${jwt}&submit=Message`;
+    var requestedData = `${url}&messenger=${message}&token=${jwt}&submit=Message`;
     console.log(requestedData);
 
     var displayed = 0
@@ -318,7 +314,7 @@ function postImage_Flickr() {
             var url = "https://web-rfnl5hmkocvsi.azurewebsites.net/DPZ/REST.php?do=PostImage&";
             var jwt = sessionStorage.getItem("token");
             var message = document.getElementById("source").value;
-            var requestedData = `${url}message=${message}&jwt=${jwt}&url=${image_url}&submit=PostImage`;
+            var requestedData = `${url}image=${image_url}&token=${jwt}&message=${message}&image=${image_url}&submit=PostImage`;
             console.log(requestedData);
 
             var displayed = 0;
@@ -330,7 +326,6 @@ function postImage_Flickr() {
             xhttpLocal.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
                     console.log(xhttpLocal.response, this.status)
-                        //  location.assign('main-page.html')
                 } else
                 if (this.status == 404) {
                     if (displayed == 0) {
@@ -372,7 +367,7 @@ function postImage_fb() {
             var url = "https://web-rfnl5hmkocvsi.azurewebsites.net/FBFINAL/REST.php?do=PostImage&";
             var jwt = sessionStorage.getItem("token");
             var message = document.getElementById("source").value;
-            var requestedData = `${url}image=${image_url}&mesaj=${message}&jwt=${jwt}&submit=Image`;
+            var requestedData = `${url}image=${image_url}&mesaj=${message}&token=${jwt}&submit=Image`;
             console.log(requestedData);
 
             var displayed = 0;
@@ -384,7 +379,6 @@ function postImage_fb() {
             xhttpLocal.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
                     console.log(xhttpLocal.response, this.status)
-                    location.assign('main-page.html')
                 } else
                 if (this.status == 404) {
                     if (displayed == 0) {
@@ -425,7 +419,6 @@ function postURL_fb() {
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) { // url found
             console.log(xhttp.response, this.status)
-            location.reload();
         } else
         if (this.status == 404) { // url not found
             if (displayed == 0) {
