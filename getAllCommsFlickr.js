@@ -3,7 +3,7 @@ function getAllCommsFlickr () {
     var xhttp
     //var postID = '49765475798'
     var postID = sessionStorage.getItem("postID_FLICKR"); // VLADOO
-    var url = 'https://web-rfnl5hmkocvsi.azurewebsites.net/DPZ/REST.php?do=getComments&postId=' + postID + '&userid=' + sessionStorage.getItem('id_user')
+    var url = 'https://web-rfnl5hmkocvsi.azurewebsites.net/DPZ/REST.php?do=getComments&postId=' + postID + '&token=' + sessionStorage.getItem('token');
   
     console.log(url)
   

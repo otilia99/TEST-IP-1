@@ -54,6 +54,7 @@
                         <li><a href="#" class="stats-btn" onclick="retrievePostsRankingTwitter()">Posts Ranking</a></li>
                         <li><a href="#" class="stats-btn" onclick="retrieveStats()">View Stats</a></li>
                         <li><a href="#" class="stats-btn" onclick="retrieveProfileTwitter()">Account Name</a></li>
+                        <li><a href="#" class="stats-btn" onclick="retrieveFollowersTwitter()">Daily Followers Count</a></li>
                         <!-- GET http://sma-a4.herokuapp.com/<platform>/profile -->
                     </ul>
                 </div>
@@ -82,6 +83,8 @@
                         <li><a href="#" class="stats-btn" onclick="retrievePostsRankingTumblr()">Posts Ranking</a></li>
                         <li><a href="#" class="stats-btn" onclick="retrievePostInfoTumblr()">View post stats</a></li>
                         <li><a href="#" class="stats-btn" onclick="getStatisticsTumblr()">Platform statistics</a></li>
+                        <li><a href='#' class="stats-btn" onclick="retrieveFollowersTumblr()">Daily Followers Count</a></li>
+                        <li><a href='#' class="stats-btn" onclick="retrieveDailyStatsTumblr()">Daily Stats</a></li>
                         <li><a href="#" class="stats-btn" onclick=" ">Account Name</a></li>
                     </ul>
                 </div>
@@ -96,6 +99,7 @@
                         <li><a href="#" class="stats-btn" onclick="retrievePostsRankingLinkedIn()">Posts Ranking</a></li>
                         <li><a href="#" class="stats-btn" onclick="retrievePostInfoLinkedin()">View post stats</a></li>
                         <li><a href="#" class="stats-btn" onclick="getStatisticsLinkedin()">Platform statistics</a></li>
+                        <li><a href='#' class="stats-btn" onclick="retrieveFollowersLinked()">Daily Followers Count</a></li>
                     </ul>
                 </div>
             </div>
@@ -108,6 +112,8 @@
             </div>
         </div>
     </section>
+    <script src="retrieveDailyStats.js"></script>
+    <script src="retrieveDailyFollowers.js"></script>
     <script src="retrievePostsRanking.js"></script>
     <script src="retrieveProfileTwitter.js"></script>
     <script src="retrievePostsTwitter.js"></script>

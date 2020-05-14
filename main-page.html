@@ -15,6 +15,7 @@
     <script src="postTwitter.js"></script>
     <script src="postTumblr.js"></script>
     <script src="postLinkedin.js"></script>
+    <script src="postScript.js"></script>
     <title>Post Page</title>
 </head>
 
@@ -69,17 +70,14 @@
                     <textarea id="source"></textarea>
                     <div class="upload-btn-wrapper">
                         <button class="uploadBtn">Upload a file</button>
-                        <input type="file" id="test" name="myfile" />
+                        <input type="file" id="test_image" name="myfile" />
                     </div>
-                    <button class="btn attach-button" id="postare" onClick="postImageFlickr()">Post
-                        Message&Image</button>
-                    <button class="btn attach-button" onClick="retrieveProfileLinkedInPost()">Post Text & URL</button>
-                    <button class="btn attach-button" id="post-btn" onClick="postMess()">Post Text</button>
+                    <button class="btn attach-button" id="postare" onClick="postAll_URL()">URL + TEXT</button>
+                    <button class="btn attach-button" onClick="postAll_Image()">IMAGINI</button>
+                    <button class="btn attach-button" id="post-btn" onClick="postAll_Message()">TEXT</button>
                 </div>
             </div>
-
         </div>
-
     </section>
 
     <script type=text/javascript>

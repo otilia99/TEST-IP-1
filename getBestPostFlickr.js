@@ -1,7 +1,7 @@
 function getBestPost() {
 
     var xhttp;
-    var url1 = "xample: https://web-rfnl5hmkocvsi.azurewebsites.net/DPZ/REST.php?do=getBestPost&userid=" + sessionStorage.getItem("id_user");
+    var url1 = "xample: https://web-rfnl5hmkocvsi.azurewebsites.net/DPZ/REST.php?do=getBestPost&token=" + sessionStorage.getItem("token");
 
     //console.log(url1);
 

@@ -1,7 +1,7 @@
 function getUsername() {
     var xhttp;
     var id = sessionStorage.getItem("id_user");
-    var url = "https://web-rfnl5hmkocvsi.azurewebsites.net/DPZ/REST.php?do=getAccountName&userid=" + id;
+    var url = "https://web-rfnl5hmkocvsi.azurewebsites.net/DPZ/REST.php?do=getAccountName&token=" + sessionStorage.getItem('token');
     console.log(url);
 
     var displayed = 0;
