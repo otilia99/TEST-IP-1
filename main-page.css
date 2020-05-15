@@ -82,6 +82,61 @@ textarea {
 }
 
 
+/* Drop down select*/
+
+.custom-select {
+    height: 30vh;
+    width: 20%;
+    border-top: 20px solid #1c226b;
+    border-radius: 20px;
+    background-color: #f3f3f3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.styled-select {
+    background-color: #3B5998;
+    height: 29px;
+    overflow: hidden;
+}
+
+.styled-select select {
+    border: none;
+    font-size: 14px;
+    height: 29px;
+    padding: 5px;
+    width: 100px;
+    color: white;
+}
+
+.styled-select .fb {
+    background: #3B5998;
+}
+
+.styled-select .linked {
+    background: #007bb5;
+}
+
+.styled-select .tumblr {
+    background: #2c4762;
+}
+
+.styled-select.slate {
+    background-color: #3B5998;
+    height: 34px;
+    width: 200px;
+}
+
+.styled-select.slate select {
+    border: 1px solid #ccc;
+    font-size: 16px;
+    height: 34px;
+    width: 200px;
+}
+
+
 /*Upload button*/
 
 .upload-btn-wrapper {
