@@ -41,6 +41,7 @@
                         <li><a href="#" class="stats-btn" onclick="getComm()">Get all comments</a></li>
                         <li><a href="#" class="stats-btn" onclick="getLastComms()">Get last 3 comms</a></li>
                         <li><a href='#' class="stats-btn" onclick="getPostText()">Get post text </a></li>
+                        <li><a href='#' class="stats-btn" onclick="avg_LikesFB()">Avg Likes Time </a></li>
                     </ul>
                 </div>
             </div>
@@ -110,7 +111,7 @@
             <div class="custom-select">
                 <span> Select Time Interval for your favorite platform</span>
                 <div class="styled-select slate">
-                    <select class="fb">
+                    <select class="fb" id="select_time" onchange="set_time()">
                     <option value="0">Select Time Interval:</option>
                     <option value="1">Daily</option>
                     <option value="2">This Week</option>
@@ -142,6 +143,8 @@
     <script src="GetBestPost.js"></script>
     <script src="getUsername.js"></script>
     <script src="getFavesCount.js"></script>
+    <script src="time_scripts.js"></script>
+    <script src="AvgLikes_Interval_FB.js"></script>
     <script type="text/javascript" src="GetAllComms.js">
         console.log(sessionStorage.getItem("fbId"));
     </script>
