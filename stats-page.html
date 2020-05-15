@@ -107,10 +107,18 @@
         </div>
 
         <div class="wrapper">
-            <div class="wrapper-content" id="content-area" style="overflow-y: scroll; border-bottom: 0px;">
-
+            <div class="custom-select">
+                <span> Select Time Interval for your favorite platform</span>
+                <div class="styled-select slate">
+                    <select class="fb">
+                    <option value="0">Select Time Interval:</option>
+                    <option value="1">Daily</option>
+                    <option value="2">This Week</option>
+                    <option value="3">This Month</option>
+                  </select>
+                </div>
             </div>
-        </div>
+            <div class="wrapper-content" id="content-area" style="overflow-y: scroll; border-bottom: 0px;"></div>
     </section>
     <script src="retrieveDailyStats.js"></script>
     <script src="retrieveDailyFollowers.js"></script>
