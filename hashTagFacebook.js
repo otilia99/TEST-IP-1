@@ -33,7 +33,7 @@ function popularHashTagFacebook() {
     xhttp.send(null)
   }
   
-  function modifyHTML2 (hashtag,appearences) {
+  function modifyHTML2 (hashtag) {
     var elem = document.createElement('div')
     var tag_p = document.createElement('p')
 
