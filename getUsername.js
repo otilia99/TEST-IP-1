@@ -1,7 +1,7 @@
 function getUsername() {
     var xhttp;
     var id = sessionStorage.getItem("id_user");
-    var url = "https://web-rfnl5hmkocvsi.azurewebsites.net/DPZ/REST.php?do=getAccountName&userid=" + id;
+    var url = "https://web-rfnl5hmkocvsi.azurewebsites.net/DPZ/REST.php?do=getAccountName&token=" + sessionStorage.getItem('token');
     console.log(url);
 
     var displayed = 0;
@@ -14,7 +14,7 @@ function getUsername() {
 
     xhttp.onreadystatechange = function() {
 
-        console.log('sunt aici');
+        //console.log('sunt aici');
         if (this.readyState == 4 && this.status == 200) {
 
             console.log(xhttp.response);
@@ -31,7 +31,7 @@ function getUsername() {
                 location.reload()
                 displayed++
             }
-            console.log('sunt aici bad');
+            //console.log('sunt aici bad');
         }
 
     };

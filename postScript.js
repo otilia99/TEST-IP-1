@@ -1,89 +1,85 @@
 function postAll_Message() {
-	var fb = document.getElementById("facebook").checked;
-	var twitter = document.getElementById("twitter").checked;
-	var linkedin = document.getElementById("linkedin").checked;
-	var flickr = document.getElementById("flickr").checked;
-	var tumblr = document.getElementById("tumblr").checked;
+    var fb = document.getElementById("facebook").checked;
+    var twitter = document.getElementById("twitter").checked;
+    var linkedin = document.getElementById("linkedin").checked;
+    var flickr = document.getElementById("flickr").checked;
+    var tumblr = document.getElementById("tumblr").checked;
 
-	if (fb){
-		postMessage_fb();
-		console.log("Postez mesaj text fb");
-	}
-	if (twitter){
-		post_Twitter();
-		console.log("Postez mesaj text pe twitter");
-	}
-	if (linkedin){
-		post_Linkedin();
-		console.log("Postez mesaj text pe linkedin");
-	}
-	if (flickr){
+    if (fb) {
+        postMessage_fb();
+        console.log("Postez mesaj text fb");
+    }
+    if (twitter) {
+        post_Twitter();
+        console.log("Postez mesaj text pe twitter");
+    }
+    if (linkedin) {
+        post_Linkedin();
+        console.log("Postez mesaj text pe linkedin");
+    }
+    if (flickr) {
 
-	}
-	if (tumblr){
-		post_Tumblr();
-		console.log("Postez mesaj text pe tumblr.");
-	}
-	// nu poti posta doar text pe flickr :)
+    }
+    if (tumblr) {
+        post_Tumblr();
+        console.log("Postez mesaj text pe tumblr.");
+    }
+    // nu poti posta doar text pe flickr :)
 }
 
 function postAll_Image() {
-	var fb = document.getElementById("facebook").checked;
-	var twitter = document.getElementById("twitter").checked;
-	var linkedin = document.getElementById("linkedin").checked;
-	var flickr = document.getElementById("flickr").checked;
-	var tumblr = document.getElementById("tumblr").checked;
+    var fb = document.getElementById("facebook").checked;
+    var twitter = document.getElementById("twitter").checked;
+    var linkedin = document.getElementById("linkedin").checked;
+    var flickr = document.getElementById("flickr").checked;
+    var tumblr = document.getElementById("tumblr").checked;
 
-	if (fb){
-		postImage_fb();
-		console.log("Postez img pe fb");
-	}
-	if (twitter){
-		post_Twitter();
-		console.log("Postez img pe twitter");
-	}
-	if (linkedin){
-		post_Linkedin();
-		console.log("Postez img pe linkedin");
-	}
-	if (flickr){
-		postImage_Flickr();
-		console.log("Postez img pe flickr");
-	}
-	if (tumblr){
-		post_Tumblr();
-		console.log("Postez img pe tumblr");
-	}
-	if (flickr){
-		postImage_Flickr();
-		console.log("Postez img pe flickr");
-	}
+    if (fb) {
+        postImage_fb();
+        console.log("Postez img pe fb");
+    }
+    if (twitter) {
+        post_Twitter();
+        console.log("Postez img pe twitter");
+    }
+    if (linkedin) {
+        post_Linkedin();
+        console.log("Postez img pe linkedin");
+    }
+    if (flickr) {
+        postImage_Flickr();
+        console.log("Postez img pe flickr");
+    }
+    if (tumblr) {
+        post_Tumblr();
+        console.log("Postez img pe tumblr");
+    }
 }
 
 function postAll_URL() {
-	var fb = document.getElementById("facebook").checked;
-	var twitter = document.getElementById("twitter").checked;
-	var linkedin = document.getElementById("linkedin").checked;
-	var flickr = document.getElementById("flickr").checked;
-	var tumblr = document.getElementById("tumblr").checked;
+    var fb = document.getElementById("facebook").checked;
+    var twitter = document.getElementById("twitter").checked;
+    var linkedin = document.getElementById("linkedin").checked;
+    var flickr = document.getElementById("flickr").checked;
+    var tumblr = document.getElementById("tumblr").checked;
 
-	if (twitter){
-		post_Twitter();
-		console.log("Postez url pe twitter");
-	}
-	if (linkedin){
-		post_Linkedin();
-		console.log("Postez url pe linkedin");
-	}
-	if (tumblr){
-		post_Tumblr();
-		console.log("Postez url pe tumblr");
-	}
-	if (fb){
-		postURL_fb();
-		console.log("Postez url pe fb");
-	}
-	// Nu am vazut url pt flickr
+    if (twitter) {
+        post_Twitter();
+        console.log("Postez url pe twitter");
+    }
+    if (linkedin) {
+        post_Linkedin();
+        console.log("Postez url pe linkedin");
+    }
+    if (tumblr) {
+        post_Tumblr();
+        console.log("Postez url pe tumblr");
+    }
+    if (fb) {
+        postURL_fb();
+        console.log("Postez url pe fb");
+    }
+    // Nu am vazut url pt flickr
 }
 
 
@@ -94,11 +90,11 @@ function postAll_URL() {
 
 function postMessage_fb() {
     var url = "https://web-rfnl5hmkocvsi.azurewebsites.net/FBFINAL/REST.php?do=PostMessage";
-    var fb_id = sessionStorage.getItem("id_user");
+    var jwt = sessionStorage.getItem("token");
     var message = document.getElementById("source").value;
     console.log(message);
 
-    var requestedData = `${url}&messenger=${message}&fbid=${fb_id}&submit=Message`;
+    var requestedData = `${url}&messenger=${message}&token=${jwt}&submit=Message`;
     console.log(requestedData);
 
     var displayed = 0
@@ -124,12 +120,11 @@ function postMessage_fb() {
     xhttp.send(null);
 }
 
-function post_Twitter(){
-	const invocation = new XMLHttpRequest();
+function post_Twitter() {
+    const invocation = new XMLHttpRequest();
     const url = "https://sma-a4.herokuapp.com/";
-    //http://sma-a4.herokuapp.com/nume_platforma/profile
-    const nume_platforma = "twitter/" // se seteaza in functie de ce e nevoie	
-    const actiune = "post" // se seteaza in functie de ce e nevoie
+    const nume_platforma = "twitter/"
+    const actiune = "post"
 
     var id = sessionStorage.getItem("id_user");
     var message = document.getElementById("source").value;
@@ -191,12 +186,11 @@ function getUrl() {
     source.replace(urlRegEx, "<a href='$1'>$1</a>");
 }
 
-function post_Linkedin(){
-	const invocation = new XMLHttpRequest();
+function post_Linkedin() {
+    const invocation = new XMLHttpRequest();
     const url = "https://sma-a4.herokuapp.com/";
-    //http://sma-a4.herokuapp.com/nume_platforma/profile
-    const nume_platforma = "linkedin/" // se seteaza in functie de ce e nevoie	
-    const actiune = "post" // se seteaza in functie de ce e nevoie
+    const nume_platforma = "linkedin/";
+    const actiune = "post";
 
     var id = sessionStorage.getItem("id_user");
     var message = document.getElementById("source").value;
@@ -243,11 +237,10 @@ function post_Linkedin(){
 }
 
 function post_Tumblr() {
-	const invocation = new XMLHttpRequest();
+    const invocation = new XMLHttpRequest();
     const url = "https://sma-a4.herokuapp.com/";
-    //http://sma-a4.herokuapp.com/nume_platforma/profile
-    const nume_platforma = "tumblr/" // se seteaza in functie de ce e nevoie	
-    const actiune = "post" // se seteaza in functie de ce e nevoie
+    const nume_platforma = "tumblr/"
+    const actiune = "post"
 
     var id = sessionStorage.getItem("id_user");
     var message = document.getElementById("source").value;
@@ -299,8 +292,8 @@ function post_Tumblr() {
 
 
 
-function postImage_Flickr(){
-	    /*Post to Imgur*/
+function postImage_Flickr() {
+    /*Post to Imgur*/
     var image_url;
     img_url = 'https://api.imgur.com/3/image';
 
@@ -319,9 +312,9 @@ function postImage_Flickr(){
             image_url = response.data.link;
             /*al doilea request*/
             var url = "https://web-rfnl5hmkocvsi.azurewebsites.net/DPZ/REST.php?do=PostImage&";
-            var id = sessionStorage.getItem("id_user");
+            var jwt = sessionStorage.getItem("token");
             var message = document.getElementById("source").value;
-            var requestedData = `${url}message=${message}&userid=${id}&url=${image_url}&submit=PostImage`;
+            var requestedData = `${url}image=${image_url}&token=${jwt}&message=${message}&image=${image_url}&submit=PostImage`;
             console.log(requestedData);
 
             var displayed = 0;
@@ -333,7 +326,6 @@ function postImage_Flickr(){
             xhttpLocal.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
                     console.log(xhttpLocal.response, this.status)
-                        //  location.assign('main-page.html')
                 } else
                 if (this.status == 404) {
                     if (displayed == 0) {
@@ -353,8 +345,8 @@ function postImage_Flickr(){
     xhr.send(fd);
 }
 
-function postImage_fb(){
-	/*Post to Imgur*/
+function postImage_fb() {
+    /*Post to Imgur*/
     var image_url;
     img_url = 'https://api.imgur.com/3/image';
 
@@ -373,9 +365,9 @@ function postImage_fb(){
             image_url = response.data.link;
             /*al doilea request*/
             var url = "https://web-rfnl5hmkocvsi.azurewebsites.net/FBFINAL/REST.php?do=PostImage&";
-            var fb_id = sessionStorage.getItem("id_user");
+            var jwt = sessionStorage.getItem("token");
             var message = document.getElementById("source").value;
-            var requestedData = `${url}image=${image_url}&mesaj=${message}&fbid=${fb_id}&submit=Image`;
+            var requestedData = `${url}image=${image_url}&mesaj=${message}&token=${jwt}&submit=Image`;
             console.log(requestedData);
 
             var displayed = 0;
@@ -387,7 +379,6 @@ function postImage_fb(){
             xhttpLocal.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
                     console.log(xhttpLocal.response, this.status)
-                    location.assign('main-page.html')
                 } else
                 if (this.status == 404) {
                     if (displayed == 0) {
@@ -413,9 +404,9 @@ function postImage_fb(){
 // POSTARE URL + TEXT
 
 function postURL_fb() {
-	var urlLocal = getUrl();
+    var urlLocal = getUrl();
     console.log(urlLocal);
-    var url = "https://web-rfnl5hmkocvsi.azurewebsites.net/FBFINAL/REST.php?submit=Url&do=PostUrl&fbid=" + sessionStorage.getItem("id_user") + "&url=" + urlLocal + "&mesaj=" + document.getElementById("source").value;
+    var url = "https://web-rfnl5hmkocvsi.azurewebsites.net/FBFINAL/REST.php?submit=Url&do=PostUrl&jwt=" + sessionStorage.getItem("token") + "&url=" + urlLocal + "&mesaj=" + document.getElementById("source").value;
     console.log(document.getElementById("source").value);
     console.log(url);
 
@@ -428,7 +419,6 @@ function postURL_fb() {
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) { // url found
             console.log(xhttp.response, this.status)
-            location.reload();
         } else
         if (this.status == 404) { // url not found
             if (displayed == 0) {
